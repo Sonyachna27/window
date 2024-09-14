@@ -1,0 +1,235 @@
+header{
+	@media screen and (max-width:1023px) {
+		position: fixed;
+		top: 0;
+		left: 0;
+		background-color: $--white;
+		height: auto;
+		width: 100%;
+		z-index: 50;
+	}
+}
+.header__bottom__links{
+	& svg{
+		position: relative;
+		z-index: 1;
+	}
+}
+.header__link__catalog{
+	padding: 18px 20px;
+}
+.header__top{
+	background: $--gradient;
+	@media screen and (max-width:1023px) {
+		display: none;
+	}
+}
+.header__top__container{
+	display: flex;
+	gap: 40px;
+	align-items: center;
+	justify-content: space-between;
+	padding: 8px 0;
+}
+.header__top__link{
+	color: $--white;
+	display: flex;
+	max-width: fit-content;
+	width: 100%;
+	gap: 8px;
+	align-items: center;
+	& span{
+		text-decoration: underline;
+		@include  p1;
+	}
+	@media screen and (max-width:1023px) {
+		color: $--dark-blue1;
+		& svg path{
+			fill:$--dark-blue1;
+		}
+		& span{
+			@include titleH4;
+		}
+	}
+}
+.header__top__links{
+	display: flex;
+	gap: 20px;
+	align-items: center;
+		@media screen and (max-width:1023px) {
+			flex-direction: column;
+		}
+}
+.switcher{
+	max-width: 88px;
+	width: 100%;
+	& img{
+		max-width: 100%;
+		width: 100%;
+		max-height: 49px;
+		height: 100%;
+		object-fit: cover;
+	}
+	@media screen and (max-width:1023px) {
+	max-width: 320px;
+	width: 100%;
+	max-height: 49px;
+	}
+}
+.header__top__socials{
+	@media screen and (max-width:1023px) {
+		& a{
+				max-width: 68px;
+				max-height: 68px;
+				width: 68px;
+				height: 68px;
+			& svg circle{
+						fill: #E8EDF1;
+			}
+		}
+	}
+}
+.burger{
+	@media screen and (min-width:1024px) {
+		display: none;
+	}
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	background-color: $--blue1;
+	gap: 8px;
+	width: 48px;
+	height: 48px;
+	border-radius: 50%;
+	cursor: pointer;
+	& span{
+		width: 24px;
+		height: 3px;
+		background-color: $--white;
+		border-radius: 500px;
+		transition: .3s linear;
+		.open &{
+			&:nth-of-type(1){
+				transform: rotate(360deg) rotate(45deg) translate(3px, 4px)  scale(1.07);
+			}
+		
+			&:nth-of-type(2){
+				transform:rotate(360deg) rotate(-45deg) translate(3px, -5px) scale(1.07)
+			}
+		}
+	}
+	
+}
+.header__bottom{
+	background-color: $--white;
+	@media screen and (max-width:1023px) {
+		border-bottom: 1px solid $--gray3;
+	}
+	& .header__top__container{
+		@media screen and (min-width:1024px) {
+			display: none;
+		}
+		flex-direction: column;
+		gap: 30px;
+		width: 100%;
+	}
+}
+.header__bottom__container{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 20px;
+	@media screen and (max-width:1023px) {
+		padding: 6px 0;
+		
+	}
+	& .logo{
+		max-width: 105px;
+		width: 100%;
+		
+	}
+}
+.header__wrap{
+	width: 78%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+		@media screen and (max-width:1023px) {
+			width: 100%;
+			position: fixed;
+			top: 62px;
+			height: calc(100vh - 62px);
+			left: -100%;
+			background-color: $--white;
+			flex-direction: column;
+			align-items: flex-start;
+			padding: 40px 20px;
+			transition: .3s linear;
+			overflow: hidden;
+			overflow-y: auto;
+			justify-content: center;
+			.open &{
+					left: 0;
+			}
+		}
+}
+
+.menu{
+	@media screen and (max-width:1023px) {
+		margin-bottom: 40px;
+	}
+	ul{
+		display: flex;
+		align-items: center;
+		gap: 50px;
+		@media screen and (max-width:1200px) {
+			gap: 30px;
+		}
+		@media screen and (max-width:1023px) {
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 40px;
+		}
+		& li{
+			@include p2;
+				color: $--gray3;
+				@media screen and (max-width:1023px) {
+					@include titleH4;
+				 }
+				@media screen and (min-width:1024px) {
+					padding: 37px 10px 35px 10px;
+					flex-grow: 1;
+					height: auto;	
+				}
+				&.current-menu-item{
+					color: $--dark-blue1;
+					@media screen and (min-width:1024px) {
+						background-color: $--blue;
+						border-bottom: 2px solid $--blue1;
+					}
+					
+				}
+			& a{
+				width: 100%;
+				white-space: nowrap;
+				
+			}
+		
+		}
+	}
+}
+.header__bottom__links{
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	@media screen and (max-width:1023px) {
+		flex-direction: column;
+		margin-bottom: 30px;
+		width: 100%;
+		& .btn{
+			max-width: 100%;
+			width: 100%;
+		}
+		}
+}

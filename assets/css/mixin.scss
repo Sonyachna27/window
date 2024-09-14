@@ -1,0 +1,107 @@
+@mixin titleH1{
+	font-size: 40px;
+	font-weight: 900;
+	line-height: 140%;
+	@media screen and (max-width:1023px) {
+		font-size: 38px;
+	}
+	@media screen and (max-width:767px) {
+		font-size: 26px;
+	}
+}
+@mixin titleH2{
+	font-size: 38px;
+	font-weight: 700;
+	line-height: 140%;
+	@media screen and (max-width:1023px) {
+		font-size: 38px;
+	}
+	@media screen and (max-width:767px) {
+		font-size: 26px;
+	}
+}
+@mixin titleH3{
+	font-size: 30px;
+	font-weight: 700;
+	line-height: 140%;
+	@media screen and (max-width:1023px) {
+		font-size: 30px;
+	}
+	@media screen and (max-width:767px) {
+		font-size: 24px;
+	}
+}
+@mixin titleH4{
+	font-size: 30px;
+	font-weight: 700;
+	line-height: 140%;
+	@media screen and (max-width:1023px) {
+		font-size: 30px;
+	}
+	@media screen and (max-width:767px) {
+		font-size: 24px;
+	}
+}
+@mixin titleH5{
+	font-size: 20px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: normal;
+	@media screen and (max-width:1023px) {
+		font-size: 16px;
+		font-weight: 600;
+	}
+	@media screen and (max-width:767px) {
+		font-size: 24px;
+	}
+}
+@mixin p1{
+font-size: 18px;
+font-weight: 400;
+line-height: 150%;
+}
+@mixin p11{
+font-size: 18px;
+font-weight: 400;
+line-height: 140%;
+}
+@mixin p12{
+font-size: 18px;
+font-weight: 700;
+line-height: normal;
+}
+@mixin p2{
+font-size: 16px;
+font-weight: 400;
+line-height: 140%;
+}
+@mixin p21{
+font-size: 16px;
+font-weight: 600;
+line-height: normal;
+}
+@mixin p3{
+font-size: 14px;
+font-weight: 400;
+line-height: 140%;
+}
+@mixin p31{
+font-size: 14px;
+font-weight: 600;
+line-height: 150%;
+}
+@mixin p32{
+font-size: 14px;
+font-weight: 800;
+line-height: 150%;
+}
+@mixin p4{
+font-size: 12px;
+font-weight: 600;
+line-height: 150%;
+}
+@mixin p41{
+font-size: 12px;
+font-weight: 900;
+line-height: 150%;
+}

@@ -1,0 +1,124 @@
+.category__container{
+	& .btn{
+		margin:  0 auto;
+		max-width: 277px;
+		width: 100%;
+		@media screen and (max-width:767px) {
+			max-width: 100%;
+		}
+	}
+}
+.category__items{
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 15px 20px;
+	margin-bottom: 40px;
+	@media screen and (max-width:1023px) {
+		display: flex;
+		flex-direction: column;
+		
+	}
+	@media screen and (max-width:767px) {
+	margin-bottom: 20px;
+	}
+}
+.category__item{
+	border: 1px solid $--gray3;
+	display: flex;
+	min-height: 448px;
+	cursor: pointer;
+	background-color: $--gray2;
+	transition: .3s linear;
+	position: relative;
+	justify-content: space-between;
+	@media screen and (max-width:767px) {
+		flex-direction: column-reverse;
+	}
+	&:after{
+		content: '';
+		position: absolute;
+		top:0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		opacity: 0;
+		z-index: 0;
+		background: linear-gradient(226deg, #FA5F39 25.84%, #2A00F4 98.56%);
+		}
+	&:hover{
+	
+		&::after{
+			opacity: 1;
+		}
+		.category__descr{
+			background-color: transparent;
+			color: $--white;
+			& svg rect{
+				fill: $--white;
+				stroke: $--white;
+			}
+
+		}
+	}
+}
+.category__descr{
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	padding: 30px;
+	background-color: $--gray2;
+	transition: .3s linear;
+	z-index: 1;
+	width: 54%;
+	color: $--dark-blue1;
+	@media screen and (max-width:767px) {
+		width: 100%;
+		min-height: 236px;
+	}
+	& img{
+		max-width: 70px;
+		max-height: 70px;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		
+	}
+	& svg{
+		max-width: 56px;
+		max-height: 56px;
+		width: 100%;
+		height: 100%;
+		margin-top: auto;
+		@media screen and (max-width:767px) {
+			margin-top: 50px;
+			max-width: 32px;
+			max-height: 32px;
+		}
+	}
+}
+.category__image{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #F4F4F4;
+	z-index: 1;
+	width: 46%;
+	@media screen and (max-width:767px) {
+		width: 100%;
+		aspect-ratio: 1;
+		padding: 47px 35px;
+	}
+	& img{
+		max-width: 291px;
+		max-height: 291px;
+		width: 100%;
+		height: 100%;
+		aspect-ratio: 1;
+		object-fit: cover;
+		@media screen and (max-width:767px) {
+			max-width: 100%;
+			max-height: 100%;
+			aspect-ratio: 1 / .95;
+		}
+	}
+}
