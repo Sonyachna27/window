@@ -3,6 +3,9 @@
 	background-color: $--white;
 	border-radius: 30px;
 border: 1px solid $--gray4;
+@media screen and (max-width:767px) {
+	padding: 40px 0;
+}
 }
 .advantages__item{
 	padding:60px 40px;
@@ -17,6 +20,10 @@ border: 1px solid $--gray4;
 }
 .advantages__item__top{
 	justify-content: space-between;
+	gap: 10px;
+	@media screen and (max-width:367px) {
+		word-break: break-all;
+	}
 	&:hover{
 		color: $--blue1;
 		& .advantages-icon-wrapper{
@@ -25,6 +32,7 @@ border: 1px solid $--gray4;
 	}
 	& h3{
 		@include titleH4;
+		
 	}
 }
 .advantages-icon-wrapper{
@@ -37,18 +45,26 @@ border: 1px solid $--gray4;
 	max-height: 48px;
 	width: 100%;
 	aspect-ratio: 1;
-	& img{
+	@media screen and (max-width:767px) {
+		max-width: 32px;
+		max-height: 32px;
+	 }
+	& svg{
 		width: 17px;
 		height: 13px;
 		transition: .3s linear;
-		
+		transform: rotate(180deg);
+		@media screen and (max-width:767px) {
+			width: 11px;
+		height: 8px;
+		 }
 	}
 }
 .advantages__item.active .advantages-icon-wrapper{
 background-color: $--blue1;
 }
-.advantages__item.active .advantages-icon-wrapper img{
-transform: rotate(180deg);
+.advantages__item.active .advantages-icon-wrapper svg{
+transform: rotate(0deg);
 }
 .advantages__item.active .advantages__item__top h3{
 color: $--blue1;
@@ -80,7 +96,8 @@ color: $--blue1;
 	padding: 80px 0 0 0;
 } 
 .advantages__item-bottom{
-	padding: 80px 0 0 0;
+	padding: 60px 0 0 0;
+	margin-top: -60px;
 }
 .advantages__item__content{
 	width: 54%;

@@ -8,6 +8,50 @@ header{
 		width: 100%;
 		z-index: 50;
 	}
+	.menu{
+		@media screen and (max-width:1023px) {
+			margin-bottom: 40px;
+		}
+		ul{
+			display: flex;
+			align-items: center;
+			gap: 50px;
+			@media screen and (max-width:1200px) {
+				gap: 30px;
+			}
+			@media screen and (max-width:1023px) {
+			flex-direction: column;
+			align-items: flex-start;
+			gap: 40px;
+			}
+			& li{
+				@include p2;
+					color: $--gray3;
+					@media screen and (max-width:1023px) {
+						@include titleH4;
+					 }
+					@media screen and (min-width:1024px) {
+						padding: 37px 10px 35px 10px;
+						flex-grow: 1;
+						height: auto;	
+					}
+					&.current-menu-item{
+						color: $--dark-blue1;
+						@media screen and (min-width:1024px) {
+							background-color: $--blue;
+							border-bottom: 2px solid $--blue1;
+						}
+						
+					}
+				& a{
+					width: 100%;
+					white-space: nowrap;
+					
+				}
+			
+			}
+		}
+	}
 }
 .header__bottom__links{
 	& svg{
@@ -159,7 +203,8 @@ header{
 			width: 100%;
 			position: fixed;
 			top: 62px;
-			height: calc(100vh - 62px);
+			min-height: calc(100vh - 62px);
+			height: 100%;
 			left: -100%;
 			background-color: $--white;
 			flex-direction: column;
@@ -168,68 +213,30 @@ header{
 			transition: .3s linear;
 			overflow: hidden;
 			overflow-y: auto;
-			justify-content: center;
+			// justify-content: center;
 			.open &{
 					left: 0;
 			}
 		}
 }
 
-.menu{
-	@media screen and (max-width:1023px) {
-		margin-bottom: 40px;
-	}
-	ul{
-		display: flex;
-		align-items: center;
-		gap: 50px;
-		@media screen and (max-width:1200px) {
-			gap: 30px;
-		}
-		@media screen and (max-width:1023px) {
-		flex-direction: column;
-		align-items: flex-start;
-		gap: 40px;
-		}
-		& li{
-			@include p2;
-				color: $--gray3;
-				@media screen and (max-width:1023px) {
-					@include titleH4;
-				 }
-				@media screen and (min-width:1024px) {
-					padding: 37px 10px 35px 10px;
-					flex-grow: 1;
-					height: auto;	
-				}
-				&.current-menu-item{
-					color: $--dark-blue1;
-					@media screen and (min-width:1024px) {
-						background-color: $--blue;
-						border-bottom: 2px solid $--blue1;
-					}
-					
-				}
-			& a{
-				width: 100%;
-				white-space: nowrap;
-				
-			}
-		
-		}
-	}
-}
+
 .header__bottom__links{
 	display: flex;
 	align-items: center;
 	gap: 10px;
+	& .btn{
+		padding: 15px 30px;
+	}
+	& .gray-btn{
+		& span{
+			color: $--dark-blue1;
+		}
+	}
 	@media screen and (max-width:1023px) {
 		flex-direction: column;
 		margin-bottom: 30px;
 		width: 100%;
-		& .btn{
-			max-width: 100%;
-			width: 100%;
-		}
+		
 		}
 }

@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", () =>{
 	heroSliderInit();
 	accordionFunction();
 	openTabs();
+	reviewsSliderFunction();
 });
 const toggleMenu = () =>{
 	const htmlElement = document.querySelector("html");
@@ -108,3 +109,34 @@ const openTabs = () =>{
     addTabsActive();
     showContent(frontBlockId, 0);
   }
+	const reviewsSliderFunction = () =>{
+		const reviewsSliderWrapper = document.querySelector('.reviewSlider');
+		if(!reviewsSliderWrapper) return;
+		const reviewsSlider = new Swiper(reviewsSliderWrapper, {
+			mousewheel: true,
+			centeredSlides: true,
+			keyboard: true,
+			spaceBetween: 20,
+			loop: true,
+			breakpoints: {
+					320: {
+						slidesPerView: 1,
+					},
+					480: {
+						slidesPerView: 1,
+					},
+				
+					990: {
+						slidesPerView: 2,
+					}
+				},
+			pagination: {
+				el: '.reviews-pagination', 
+				clickable: true,
+			},
+			navigation: {
+        nextEl: ".reviews-button-next",
+        prevEl: ".reviews-button-prev",
+      },
+		});
+	}

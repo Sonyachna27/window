@@ -82,7 +82,7 @@ main{
 }
 .btn{
 	display: flex;
-	padding: 18px 30px;
+	padding: 24px 80px;
 	justify-content: center;
 	align-items: center;
 	gap: 10px;
@@ -90,6 +90,11 @@ main{
 	background: $--blue1;
 	transition:  .3s linear;
 	cursor: pointer;
+	@media screen and (max-width:767px) {
+		padding: 24px;
+		max-width: 100%;
+		width: 100%;
+	}
 	&:after{
 		content: '';
 		position: absolute;
@@ -124,6 +129,9 @@ main{
 	}
 
 }
+.dark-blue{
+	background-color: #242343;
+}
 .socials{
 	display: flex;
 	align-items: center;
@@ -153,6 +161,9 @@ main{
 	text-align: center;
 	& h2{
 		max-width: 860px;
+	}
+	@media screen and (max-width:767px) {
+		margin-bottom: 40px;
 	}
 }
 .title-name{

@@ -39,7 +39,7 @@
 		font-size: 30px;
 	}
 	@media screen and (max-width:767px) {
-		font-size: 24px;
+		font-size: 20px;
 	}
 }
 @mixin titleH5{
@@ -48,11 +48,11 @@
 	font-weight: 700;
 	line-height: normal;
 	@media screen and (max-width:1023px) {
-		font-size: 16px;
+		font-size: 20px;
 		font-weight: 600;
 	}
 	@media screen and (max-width:767px) {
-		font-size: 24px;
+		font-size: 18px;
 	}
 }
 @mixin p1{
