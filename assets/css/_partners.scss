@@ -1,0 +1,26 @@
+.partners__items{
+	display: flex;
+	flex-wrap: wrap;
+
+
+}
+.partners__item{
+	min-height: 325px;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border: .5px solid #D9D9D9;
+	background-color: #F6F7FA;
+	padding: 10px;
+@media screen and (min-width:990px) {
+	&:nth-child(4n+2),
+&:nth-child(4n+1){
+	width: calc(50% / 2);
+}
+&:nth-child(4n+4),
+&:nth-child(4n+3){
+	width: 50%;
+}
+}
+}
