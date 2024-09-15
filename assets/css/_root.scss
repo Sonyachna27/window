@@ -67,9 +67,8 @@ h3{
 h4{
 	@include titleH4;
 }
-
 main{
-	margin-top: 40px;
+	// margin-top: 40px;
 	@media screen and (max-width:1023px) {
 		margin-top: 100px;
 	}
@@ -182,4 +181,54 @@ main{
 		border-radius: 50%;
 		background-color: $--gray3;
 	}
+}
+.breadcrumbs__wrap{
+	padding: 20px 0;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+	align-items: center;
+	@include p3;
+	color: $--dark-blue1;
+}
+.sticky-name{
+	border-top: 2px solid $--gray4;
+	background-color: $--white;
+	padding: 12px 0;
+ position: relative;
+ display: none;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	z-index: 49;
+	.sticky-body &{
+		position: fixed;
+		display: flex;
+	}
+ }
+ .sticky-name__container{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 10px;
+	& .btn{
+		background-color: $--gray2;
+		border: 1px solid $--gray4;
+		padding: 13px;
+		& span{
+			color: $--dark-blue1;
+		}
+	}
+ }
+.page__title{
+	background-color: $--white;
+	padding-bottom: 40px;
+	border-radius: 0px 0px 30px 30px;
+	border-top: 1px solid $--gray4;
+	position: relative;
+	z-index: 1;
+		& h1{
+			margin: 0 auto;
+			width: fit-content;
+		}
 }

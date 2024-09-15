@@ -60,6 +60,12 @@ footer .menu{
 				color: $--white;
 			}
 		}
+		& a{
+			transition: .3s linear;
+			&:hover{
+				color: $--blue2;
+			}
+		}
 		& .sub-menu{
 			display: flex;
 			flex-direction: column;
@@ -72,7 +78,7 @@ footer .menu{
 				color: $--gray3;
 				transition: .3s ease-in;
 				&:hover{
-					color: $--white;
+					color: $--blue2;
 				}
 			}
 		}
@@ -167,6 +173,9 @@ footer .menu{
 	background: $--gradient;
 	color: $--white;
 	padding: 30px 0;
+	@media screen and (max-width:767px) {
+		padding: 50px 0 40px 0;
+	}
 }
 .footer__copy__wrapper{
 display: flex;
