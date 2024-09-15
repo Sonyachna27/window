@@ -1,0 +1,40 @@
+.error{
+	padding: 170px 0;
+	background-color: #000;
+	@media screen and (max-width:767px) {
+		padding: 100px 0;
+	}
+}
+.error__container{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	& img{
+		max-width: 650px;
+		max-height: 250px;
+		width: 100%;
+		height: 100%;
+		
+		margin-bottom: 50px;
+		min-height: 121px;
+	}
+}
+.error__wrap{
+	max-width: 380px;
+	width: 100%;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	& h1{
+		margin-bottom: 8px;
+		color: $--white;
+	}
+	& p{
+		@include p1;
+		margin-bottom: 40px;
+		color: $--blue;
+	}
+}
