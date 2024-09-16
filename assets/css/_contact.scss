@@ -1,7 +1,7 @@
 .contact__container {
   display: grid;
   grid-template-columns: repeat(4, 1fr); /* 3 колонки рівної ширини */
-  grid-template-rows: 4;
+
 	grid-gap: 20px; 
 	@media (max-width: 1024px) {
 		grid-template-columns: 1fr 1fr; 
