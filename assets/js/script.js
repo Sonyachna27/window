@@ -58,16 +58,15 @@ const accordionFunction = () => {
     });
   });
 };
-const openTabs = () =>{
-	const targetList = document.querySelectorAll(".target__tabs");
-  if (!targetList) return;
 
-    const allContentBlocks = Array.from(
-      document.querySelectorAll(".target__content")
-    );
+const openTabs = () => {
+  const tabGroups = document.querySelectorAll(".target__wrap"); // Знаходимо всі групи табів
 
-    let frontBlockId = "target-1";
-    const tabsLinks = document.querySelectorAll(".target__list-item");
+  tabGroups.forEach((group) => {
+    const tabsLinks = group.querySelectorAll(".target__list-item");
+    const allContentBlocks = group.querySelectorAll(".target__content");
+    let frontBlockId = tabsLinks[0].dataset.name; // Перша вкладка активна за замовчуванням
+
     function addTabsActive() {
       tabsLinks.forEach((button, index) => {
         button.addEventListener("click", () => {
@@ -79,7 +78,7 @@ const openTabs = () =>{
         });
       });
     }
-    addTabsActive();
+
     function updateActiveTab(index) {
       tabsLinks.forEach((button, i) => {
         if (i === index) {
@@ -91,11 +90,10 @@ const openTabs = () =>{
     }
 
     function changeSlide(blockId) {
-      allContentBlocks.forEach((block, index) => {
+      allContentBlocks.forEach((block) => {
         if (block.getAttribute("id") === blockId) {
           block.style.display = "flex";
           block.style.opacity = 1;
-          currentIndex = index;
         } else {
           block.style.opacity = 0;
           block.style.display = "none";
@@ -103,13 +101,18 @@ const openTabs = () =>{
       });
       frontBlockId = blockId;
     }
+
     function showContent(itemName, index) {
-      changeSlide(itemName, index);
+      changeSlide(itemName);
       updateActiveTab(index);
     }
+
     addTabsActive();
-    showContent(frontBlockId, 0);
-  }
+    showContent(frontBlockId, 0); 
+  });
+};
+
+
 	const reviewsSliderFunction = () =>{
 		const reviewsSliderWrapper = document.querySelector('.reviewSlider');
 		if(!reviewsSliderWrapper) return;

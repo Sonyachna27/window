@@ -46,7 +46,10 @@ header{
 				& a{
 					width: 100%;
 					white-space: nowrap;
-					
+					transition: .3s linear;
+					&:hover{
+						color: $--dark-blue1;
+					}
 				}
 			
 			}
@@ -213,7 +216,6 @@ header{
 			transition: .3s linear;
 			overflow: hidden;
 			overflow-y: auto;
-			// justify-content: center;
 			.open &{
 					left: 0;
 			}
@@ -232,6 +234,7 @@ header{
 		}
 	}
 	& .gray-btn{
+		background-color: $--gray4;
 		& span{
 			color: $--dark-blue1;
 		}
