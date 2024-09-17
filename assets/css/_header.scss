@@ -226,7 +226,10 @@ header{
 	align-items: center;
 	gap: 10px;
 	& .btn{
-		padding: 15px 30px;
+		padding: 15px 20px;
+		@media screen and (min-width:1200px) {
+			padding: 15px 30px;
+		}
 	}
 	& .gray-btn{
 		& span{

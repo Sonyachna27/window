@@ -236,3 +236,15 @@ main{
 	margin: 70px 0;
 
 }
+.item__brand{
+	border-radius: 500px;
+	background-color: $--blue1;
+	color: $--white;
+	@include p4;
+	padding: 2px 8px;
+	width: fit-content;
+	margin-bottom: 5px;
+	& strong{
+		font-weight: 900;
+	}
+}

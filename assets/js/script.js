@@ -114,7 +114,6 @@ const openTabs = () =>{
 		const reviewsSliderWrapper = document.querySelector('.reviewSlider');
 		if(!reviewsSliderWrapper) return;
 		const reviewsSlider = new Swiper(reviewsSliderWrapper, {
-			mousewheel: true,
 			centeredSlides: true,
 			keyboard: true,
 			spaceBetween: 20,
