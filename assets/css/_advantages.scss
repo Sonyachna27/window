@@ -13,6 +13,12 @@ border: 1px solid $--gray4;
 	border-bottom: 2px solid $--gray2;
 	&.active{
 		background-color: $--gray1;
+		& .advantages-icon-wrapper{
+			background-color: $--blue1;
+			& svg path{
+				fill: $--white;
+			}
+		}
 	}
 	@media screen and (max-width:767px) {
 		padding: 30px 20px;
@@ -28,6 +34,9 @@ border: 1px solid $--gray4;
 		color: $--blue1;
 		& .advantages-icon-wrapper{
 			background-color: $--blue1;
+			& svg path{
+				fill: $--white;
+			}
 		}
 	}
 	& h3{
@@ -54,9 +63,12 @@ border: 1px solid $--gray4;
 		height: 13px;
 		transition: .3s linear;
 		transform: rotate(180deg);
+		& path{
+			transition: .3s linear;
+		}
 		@media screen and (max-width:767px) {
 			width: 11px;
-		height: 8px;
+			height: 8px;
 		 }
 	}
 }

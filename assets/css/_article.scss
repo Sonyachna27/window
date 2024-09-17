@@ -60,6 +60,10 @@
 	}
 	& a{
 		font-weight: 900;
+		transition: .3s linear;
+		&:hover{
+			color: $--blue1;
+		}
 		
 	}
 }
