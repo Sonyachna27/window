@@ -773,6 +773,12 @@ header .menu ul li a:hover {
 .header__bottom__links .gray-btn span {
   color: #242343;
 }
+.header__bottom__links .gray-btn:hover span {
+  color: #FFFFFF;
+}
+.header__bottom__links .gray-btn:hover svg path {
+  stroke: #FFFFFF;
+}
 @media screen and (max-width: 1023px) {
   .header__bottom__links {
     flex-direction: column;
@@ -1349,6 +1355,12 @@ header .menu ul li a:hover {
 .advantages__item.active {
   background-color: #F4F7F8;
 }
+.advantages__item.active .advantages-icon-wrapper {
+  background-color: #156BD9;
+}
+.advantages__item.active .advantages-icon-wrapper svg path {
+  fill: #FFFFFF;
+}
 @media screen and (max-width: 767px) {
   .advantages__item {
     padding: 30px 20px;
@@ -1369,6 +1381,9 @@ header .menu ul li a:hover {
 }
 .advantages__item__top:hover .advantages-icon-wrapper {
   background-color: #156BD9;
+}
+.advantages__item__top:hover .advantages-icon-wrapper svg path {
+  fill: #FFFFFF;
 }
 .advantages__item__top h3 {
   font-size: 30px;
@@ -1408,6 +1423,9 @@ header .menu ul li a:hover {
   height: 13px;
   transition: 0.3s linear;
   transform: rotate(180deg);
+}
+.advantages-icon-wrapper svg path {
+  transition: 0.3s linear;
 }
 @media screen and (max-width: 767px) {
   .advantages-icon-wrapper svg {
@@ -3319,6 +3337,10 @@ footer .menu ul .sub-menu a:hover {
 }
 .article a {
   font-weight: 900;
+  transition: 0.3s linear;
+}
+.article a:hover {
+  color: #156BD9;
 }
 
 .error {
