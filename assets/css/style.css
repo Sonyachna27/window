@@ -3807,6 +3807,10 @@ ul.contact__hours li {
     width: 100%;
   }
 }
+.prod__info h1 {
+  margin-bottom: 20px;
+}
+
 .prod__info__brand {
   margin-bottom: 0;
 }
@@ -3861,4 +3865,50 @@ ul.contact__hours li {
   justify-content: center;
   border-radius: 50%;
   border: 1px solid #C4C9D1;
+  width: 40px;
+  height: 40px;
+  position: relative;
+}
+.prod-icon-wrapper svg {
+  width: 16px;
+  height: 16px;
+  transition: 0.3s linear;
+}
+.active .prod-icon-wrapper svg {
+  transform: rotate(45deg);
+}
+
+.prod__item-bottom {
+  padding: 60px 0 0 0;
+}
+.prod__item-bottom.accord-item-bottom {
+  margin-top: -60px;
+}
+.prod__item-bottom p {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 140%;
+  margin-bottom: 15px;
+}
+.prod__item-bottom h4 {
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-bottom: 5px;
+}
+@media screen and (max-width: 1023px) {
+  .prod__item-bottom h4 {
+    font-size: 20px;
+    font-weight: 600;
+  }
+}
+@media screen and (max-width: 767px) {
+  .prod__item-bottom h4 {
+    font-size: 18px;
+  }
+}
+
+.accord-item.active .accord-item-bottom.prod__item-bottom {
+  padding: 60px 0 0 0;
 }/*# sourceMappingURL=style.css.map */
