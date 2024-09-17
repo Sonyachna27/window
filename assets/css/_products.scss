@@ -24,11 +24,13 @@
 
 max-height: 270px;
 aspect-ratio: 1;
-min-height: 270px;
+flex-grow: 1;
+height: auto;
 margin: 0 auto;
 margin-bottom: 20px;	
 @media screen and (max-width:767px) {
-	aspect-ratio: auto;
+	// aspect-ratio: 270 / 270;
+	min-height: 220px;
 }
 & img{
 	max-width:100%;
