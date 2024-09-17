@@ -3670,13 +3670,14 @@ ul.contact__hours li {
 .products__item__image {
   max-height: 270px;
   aspect-ratio: 1;
-  min-height: 270px;
+  flex-grow: 1;
+  height: auto;
   margin: 0 auto;
   margin-bottom: 20px;
 }
 @media screen and (max-width: 767px) {
   .products__item__image {
-    aspect-ratio: auto;
+    min-height: 220px;
   }
 }
 .products__item__image img {
