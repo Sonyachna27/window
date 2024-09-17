@@ -3669,7 +3669,6 @@ ul.contact__hours li {
 
 .products__item__image {
   max-height: 270px;
-  aspect-ratio: 1;
   flex-grow: 1;
   height: auto;
   margin: 0 auto;
