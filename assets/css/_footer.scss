@@ -95,7 +95,7 @@ footer .menu{
 	display: flex;
 	flex-direction: column;
 	gap: 40px;
-	
+
 	@media screen and (min-width:1024px) {
 		border-left: 1px solid #323750;
 		padding-left: 60px;
@@ -127,6 +127,7 @@ footer .menu{
 	width: 100%;
 	color: $--white;
 	align-items: center;
+	transition: .3s linear;
 	&:hover{
 		background-color: $--white;
 		color: $--dark-blue1;
