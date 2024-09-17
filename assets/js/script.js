@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", () =>{
 	openTabs();
 	reviewsSliderFunction();
 	stickyName();
+	animateSectionPosition();
 });
 const toggleMenu = () =>{
 	const htmlElement = document.querySelector("html");
@@ -167,3 +168,30 @@ const openTabs = () => {
 				window.addEventListener('scroll', handleScroll);
 		});
 	};
+	const animateSectionPosition = () =>{
+		const sections = document.querySelectorAll(".sectionScroll");
+		if(!sections) return;
+		const options = {
+			root: document,
+			rootMargin: "0px",
+			threshold: 0.1,
+		};
+	
+		const callback = function (entries, observer) {
+			entries.forEach((entry) => {
+				if (entry.isIntersecting && !entry.target.classList.contains("animate")) {
+					entry.target.classList.add("animate");
+				} else if (
+					!entry.isIntersecting &&
+					entry.target.classList.contains("animate")
+				) {
+					entry.target.classList.remove("animate");
+				}
+			});
+		};
+	
+		const observer = new IntersectionObserver(callback, options);
+	
+		sections.forEach((section) => observer.observe(section));
+	
+	}
