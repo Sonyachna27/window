@@ -6,6 +6,8 @@ document.addEventListener("DOMContentLoaded", () =>{
 	reviewsSliderFunction();
 	stickyName();
 	animateSectionPosition();
+	showPopUpBook();
+	fixedHeader();
 });
 const toggleMenu = () =>{
 	const htmlElement = document.querySelector("html");
@@ -194,4 +196,52 @@ const openTabs = () => {
 	
 		sections.forEach((section) => observer.observe(section));
 	
+	}
+	const showPopUpBook = () =>{
+		const popUpBook = document.querySelector(".popup-book");
+		const popupBg = document.querySelectorAll(".popup-bg");
+		const htmlElement = document.querySelector("html");
+		if (!popUpBook) return 
+			const closePopUpBook = document.querySelector(".popup-book-close");
+			const popupButtons = document.querySelectorAll(
+				'[data-button="popup-book"]'
+			);
+	
+			popupButtons.forEach((popBtn) => {
+				popBtn.addEventListener("click", () => {
+					htmlElement.classList.add('open-popup')
+					popUpBook.classList.add("open");
+				});
+			});
+			closePopUpBook.addEventListener("click", () => {
+				htmlElement.classList.remove('open-popup')
+				popUpBook.classList.remove("open");
+			});
+			popupBg.forEach((bg) =>
+				bg.addEventListener("click", () => {
+					popUpBook.classList.remove("open");
+				})
+			);
+		}
+	const fixedHeader = () =>{
+		let windowInnerWidth = window.innerWidth;
+		const headerNav = document.querySelector(".header__bottom");
+		let lastScrollTop = 0;
+
+		window.addEventListener("scroll", function () {
+			const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+	
+			if (windowInnerWidth >= 1024) {
+				if (scrollTop > lastScrollTop) {
+					if (scrollTop > 100) {
+						headerNav.classList.add("fixed-header-nav");
+						headerNav.style.animationName = "smoothScroll";
+					}
+				} else if (scrollTop <= 0) {
+					headerNav.classList.remove("fixed-header-nav");
+					headerNav.style.animationName = "removeSmoothScroll";
+				}
+				lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+			}
+		});
 	}
