@@ -8,16 +8,17 @@
 	display: flex;
 	gap: 60px;
 	padding-bottom: 40px;
-	border-bottom: 1px solid #323750;
+	&:not(:nth-last-of-type(1)){
+		border-bottom: 1px solid #323750;
+	}
 	&:not(:nth-of-type(1)){
 		padding-top: 40px;
 	}
 	@media screen and (min-width:1024px) {
-		border-bottom: 1px solid #323750;
 		padding-bottom: 70px;
-	&:not(:nth-of-type(1)){
-		padding-top: 70px;
-	}
+		&:not(:nth-of-type(1)){
+			padding-top: 70px;
+		}
 	}
 	@media screen and (max-width:1023px) {
 		flex-direction: column;
@@ -88,6 +89,7 @@
 	& h2{
 		@include titleH3;
 		color: $--white;
+		margin-bottom: 20px;
 	}
 	& p{
 		@include p11;

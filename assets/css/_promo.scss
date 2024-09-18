@@ -100,9 +100,26 @@
 	& a{
 		max-width: 60px;
 		max-height: 60px;
+		& svg {
+			circle,
+			path{
+				transition: .3s linear;
+			}
+		}
+		&:hover{
+		& svg {
+			circle {
+				fill: $--blue1;
+			}
+			path {
+				fill: $--white;
+			}
+		}
+
+		}
 		@media screen and (max-width:767px) {
 			max-width: 50px;
-		max-height: 50px;
+			max-height: 50px;
 		}
 	}
 }
