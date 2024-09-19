@@ -90,6 +90,7 @@ main{
 	background: $--blue1;
 	transition:  .3s linear;
 	cursor: pointer;
+	border: none;
 	@media screen and (max-width:767px) {
 		padding: 24px;
 		max-width: 100%;
