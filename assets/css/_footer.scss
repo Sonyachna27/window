@@ -161,9 +161,13 @@ footer .menu{
 	& div{
 		@include titleH5;
 		color: $--white;
+		transition: .3s linear;
 		@media screen and (max-width:767px) {
 			font-size: 20px;
 		}
+	}
+	& a:hover{
+		color: $--blue2;
 	}
 	& span{
 		@include p21;

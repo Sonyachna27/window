@@ -1,7 +1,1 @@
-<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g id="Group 42894">
-<g id="Group 42873">
-<path id="Vector 26" d="M11.2003 14.4005L15.2411 19.1147C15.6402 19.5803 16.3605 19.5803 16.7596 19.1147L20.8003 14.4005" stroke="#242343" stroke-width="3" stroke-linecap="round"/>
-</g>
-</g>
-</svg>
+<svg width="32" height="32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="m11.2 14.4 4.041 4.715a1 1 0 0 0 1.519 0L20.8 14.4" stroke="#242343" stroke-width="3" stroke-linecap="round"/></svg>
